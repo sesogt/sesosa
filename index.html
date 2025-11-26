@@ -16,9 +16,9 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#herramientas">Herramientas</a></li>
-                <li><a href="#equipo">Equipo</a></li>
                 <li><a href="#contacto" class="btn-contact">Contacto</a></li>
             </ul>
             <div class="hamburger">
@@ -183,39 +183,38 @@
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="equipo" class="team">
+    <!-- Liderazgo Section -->
+    <section id="liderazgo" class="team">
         <div class="container">
             <div class="section-header">
-                <h2>Nuestro Equipo</h2>
-                <p>Profesionales comprometidos con su éxito</p>
+                <h2>Nuestro Liderazgo</h2>
+                <p>Los gerentes que guían nuestra empresa</p>
             </div>
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-avatar">AG</div>
+            <div class="team-grid gerentes-home">
+                <div class="team-card gerente">
+                    <div class="team-photo">
+                        <!-- Coloca la foto: images/amory-gonzalez.webp -->
+                        <!-- <div class="team-avatar">AG</div> -->
+                        <img src="images/amory-gonzalez.webp" style="width: 50%; height: auto; border-radius: 20%;" alt="Amory González Juárez">
+                    </div>
                     <h3>Amory González Juárez</h3>
                     <p class="team-role">Gerente Comercial</p>
+                    <p class="team-bio">Líder en desarrollo de negocios y relaciones comerciales en la región.</p>
                 </div>
-                <div class="team-card">
-                    <div class="team-avatar">AM</div>
+                <div class="team-card gerente">
+                    <div class="team-photo">
+                        <!-- Coloca la foto: images/alexander-moran.webp -->
+                        <!-- <div class="team-avatar">AM</div> -->
+                         <!-- redimensionar la imagen para que se vea bien -->
+                        <img src="images/alexander-moran.webp" style="width: 50%; height: auto; border-radius: 20%;" alt="Alexander Morán">
+                    </div>
                     <h3>Alexander Morán</h3>
                     <p class="team-role">Gerente de Consultoría</p>
+                    <p class="team-bio">Experto en implementación de soluciones de auditoría y análisis de datos.</p>
                 </div>
-                <div class="team-card">
-                    <div class="team-avatar">RC</div>
-                    <h3>Raudy Cabrera</h3>
-                    <p class="team-role">Consultor en Sistemas</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-avatar">TL</div>
-                    <h3>Tarsis López</h3>
-                    <p class="team-role">Consultor Ejecutivo</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-avatar">VC</div>
-                    <h3>Vivian Cruz</h3>
-                    <p class="team-role">Consultora Ejecutiva</p>
-                </div>
+            </div>
+            <div class="team-cta">
+                <a href="nosotros.html" class="btn btn-secondary-blue">Conoce más sobre nosotros</a>
             </div>
         </div>
     </section>
@@ -275,12 +274,12 @@
                     <p class="footer-tagline">Automatizamos procesos, potencializamos resultados</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Servicios</h4>
+                    <h4>Navegación</h4>
                     <ul>
-                        <li><a href="#servicios">Ventas de Software</a></li>
-                        <li><a href="#servicios">Automatización</a></li>
-                        <li><a href="#servicios">Asesoría</a></li>
-                        <li><a href="#servicios">Capacitación</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#herramientas">Herramientas</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -294,6 +293,7 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contacto</h4>
+                    <p>(502) 2224-7777</p>
                     <p>consultor.ejecutivo@sesosa.net</p>
                 </div>
             </div>
@@ -302,6 +302,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/50250080005?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20servicios." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="currentColor">
+            <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.156-1.97C9.78 30.932 12.768 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.484 22.606c-.396 1.116-1.954 2.042-3.19 2.312-.846.182-1.95.326-5.668-1.218-4.758-1.976-7.818-6.82-8.054-7.138-.226-.318-1.9-2.53-1.9-4.826s1.2-3.424 1.628-3.894c.396-.434.928-.614 1.254-.614.15 0 .286.008.408.014.428.018.642.044.924.716.354.84 1.218 2.97 1.324 3.186.108.216.216.504.072.804-.134.308-.252.446-.468.696-.216.252-.422.446-.638.716-.198.234-.422.486-.18.928.242.44 1.076 1.776 2.312 2.876 1.59 1.416 2.93 1.856 3.344 2.062.318.158.696.134.948-.134.318-.342.71-.91 1.11-1.468.284-.398.642-.446.994-.308.358.134 2.268 1.068 2.656 1.264.388.196.648.29.744.456.094.166.094.958-.302 2.074z"/>
+        </svg>
+        <span class="whatsapp-tooltip">¿Necesitas ayuda?</span>
+    </a>
 
     <script src="script.js"></script>
 </body>

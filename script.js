@@ -2,25 +2,30 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
-});
-
-// Close menu when clicking on a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
     });
-});
 
-// Smooth scroll offset for fixed navbar
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+}
+
+// Smooth scroll offset for fixed navbar (only for same-page anchors)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        
+        const target = document.querySelector(href);
         if (target) {
+            e.preventDefault();
             const offset = 80;
             const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
             window.scrollTo({
@@ -35,38 +40,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const navbar = document.querySelector('.navbar');
 let lastScroll = 0;
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+if (navbar) {
+    navbar.style.transition = 'all 0.3s ease';
     
-    if (currentScroll > 50) {
-        navbar.style.boxShadow = '0 2px 30px rgba(0, 0, 0, 0.15)';
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-    } else {
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-    }
-    
-    // Hide/show navbar on scroll
-    if (currentScroll > lastScroll && currentScroll > 200) {
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        navbar.style.transform = 'translateY(0)';
-    }
-    lastScroll = currentScroll;
-});
-
-navbar.style.transition = 'all 0.3s ease';
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 50) {
+            navbar.style.boxShadow = '0 2px 30px rgba(0, 0, 0, 0.15)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        } else {
+            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        }
+        
+        // Hide/show navbar on scroll
+        if (currentScroll > lastScroll && currentScroll > 200) {
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            navbar.style.transform = 'translateY(0)';
+        }
+        lastScroll = currentScroll;
+    });
+}
 
 // Animated Counter for Stats
 function animateCounter(element, target, duration = 2000) {
     let start = 0;
     const increment = target / (duration / 16);
     const suffix = element.dataset.suffix || '';
+    const isYear = target > 1900 && target < 2100;
     
     const timer = setInterval(() => {
         start += increment;
         if (start >= target) {
-            element.textContent = target + '+' + suffix;
+            if (isYear) {
+                element.textContent = target;
+            } else {
+                element.textContent = target + '+' + suffix;
+            }
             clearInterval(timer);
         } else {
             element.textContent = Math.floor(start) + suffix;
@@ -81,16 +93,25 @@ const statsObserver = new IntersectionObserver((entries) => {
             const statNumbers = entry.target.querySelectorAll('.stat-number');
             statNumbers.forEach(stat => {
                 const target = parseInt(stat.dataset.target);
-                animateCounter(stat, target);
+                if (target) {
+                    animateCounter(stat, target);
+                }
             });
             statsObserver.unobserve(entry.target);
         }
     });
 }, { threshold: 0.5 });
 
+// Observe hero stats
 const heroStats = document.querySelector('.hero-stats');
 if (heroStats) {
     statsObserver.observe(heroStats);
+}
+
+// Observe history stats (nosotros page)
+const historyStats = document.querySelector('.history-stats');
+if (historyStats) {
+    statsObserver.observe(historyStats);
 }
 
 // Enhanced Intersection Observer for animations
@@ -112,7 +133,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation with staggered effect
-document.querySelectorAll('.service-card, .tool-card, .team-card').forEach((el, index) => {
+document.querySelectorAll('.service-card, .tool-card, .team-card, .mv-card, .valor-card, .gerente-card, .location-card, .timeline-item').forEach((el, index) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(40px)';
     el.style.transition = `opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)`;
@@ -142,59 +163,62 @@ sectionHeaders.forEach(header => {
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+if (contactForm && formMessage) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-    // Get form data
-    const formData = {
-        nombre: document.getElementById('nombre').value,
-        email: document.getElementById('email').value,
-        empresa: document.getElementById('empresa').value,
-        mensaje: document.getElementById('mensaje').value
-    };
+        // Get form data
+        const formData = {
+            nombre: document.getElementById('nombre').value,
+            email: document.getElementById('email').value,
+            empresa: document.getElementById('empresa').value,
+            mensaje: document.getElementById('mensaje').value
+        };
 
-    // Disable submit button with animation
-    const submitBtn = contactForm.querySelector('.btn-submit');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Enviando...';
-    submitBtn.disabled = true;
-    submitBtn.style.opacity = '0.7';
+        // Disable submit button with animation
+        const submitBtn = contactForm.querySelector('.btn-submit');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
 
-    try {
-        // Method 3: Mailto fallback (Opens email client)
-        const subject = `Contacto desde SESO SA - ${formData.empresa || 'Consulta'}`;
-        const body = `
+        try {
+            // Method 3: Mailto fallback (Opens email client)
+            const subject = `Contacto desde SESO SA - ${formData.empresa || 'Consulta'}`;
+            const body = `
 Nombre: ${formData.nombre}
 Email: ${formData.email}
 Empresa: ${formData.empresa || 'No especificada'}
 
 Mensaje:
 ${formData.mensaje}
-        `.trim();
+            `.trim();
 
-        const mailtoLink = `mailto:consultor.ejecutivo@sesosa.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        
-        // Open email client
-        window.location.href = mailtoLink;
+            const mailtoLink = `mailto:consultor.ejecutivo@sesosa.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
 
-        // Show success message
-        setTimeout(() => {
-            showMessage('Se ha abierto tu cliente de correo. Por favor, envía el mensaje desde allí.', 'success');
-            contactForm.reset();
-        }, 500);
+            // Show success message
+            setTimeout(() => {
+                showMessage('Se ha abierto tu cliente de correo. Por favor, envía el mensaje desde allí.', 'success');
+                contactForm.reset();
+            }, 500);
 
-    } catch (error) {
-        console.error('Error:', error);
-        showMessage('Hubo un error al procesar tu mensaje. Por favor, intenta de nuevo o contáctanos directamente a consultor.ejecutivo@sesosa.net', 'error');
-    } finally {
-        // Re-enable submit button
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        submitBtn.style.opacity = '1';
-    }
-});
+        } catch (error) {
+            console.error('Error:', error);
+            showMessage('Hubo un error al procesar tu mensaje. Por favor, intenta de nuevo o contáctanos directamente a consultor.ejecutivo@sesosa.net', 'error');
+        } finally {
+            // Re-enable submit button
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+        }
+    });
+}
 
 function showMessage(message, type) {
+    if (!formMessage) return;
     formMessage.textContent = message;
     formMessage.className = `form-message ${type}`;
     formMessage.style.display = 'block';
@@ -211,7 +235,7 @@ function showMessage(message, type) {
 }
 
 // Enhanced hover effects for cards
-document.querySelectorAll('.service-card, .tool-card, .team-card').forEach(card => {
+document.querySelectorAll('.service-card, .tool-card, .team-card:not(.gerente)').forEach(card => {
     card.addEventListener('mouseenter', function(e) {
         this.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease';
     });
@@ -231,14 +255,24 @@ document.querySelectorAll('.service-card, .tool-card, .team-card').forEach(card 
 });
 
 // Parallax effect for hero section
+const hero = document.querySelector('.hero');
+const heroContent = document.querySelector('.hero-content');
+const pageHero = document.querySelector('.page-hero');
+const pageHeroContent = document.querySelector('.page-hero-content');
+
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    const heroContent = document.querySelector('.hero-content');
     
-    if (hero && scrolled < window.innerHeight) {
+    // Home hero parallax
+    if (hero && heroContent && scrolled < window.innerHeight) {
         heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
         heroContent.style.opacity = 1 - (scrolled / window.innerHeight) * 0.5;
+    }
+    
+    // Page hero parallax (nosotros)
+    if (pageHero && pageHeroContent && scrolled < window.innerHeight) {
+        pageHeroContent.style.transform = `translateY(${scrolled * 0.2}px)`;
+        pageHeroContent.style.opacity = 1 - (scrolled / window.innerHeight) * 0.3;
     }
 });
 

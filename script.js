@@ -171,7 +171,7 @@ if (contactForm && formMessage) {
         const formData = {
             nombre: document.getElementById('nombre').value,
             email: document.getElementById('email').value,
-            empresa: document.getElementById('empresa').value,
+            empresa: document.getElementById('empresa').value || 'No especificada',
             mensaje: document.getElementById('mensaje').value
         };
 
@@ -183,31 +183,36 @@ if (contactForm && formMessage) {
         submitBtn.style.opacity = '0.7';
 
         try {
-            // Method 3: Mailto fallback (Opens email client)
-            const subject = `Contacto desde SESO SA - ${formData.empresa || 'Consulta'}`;
-            const body = `
+            // Intentar enviar con EmailJS
+            if (window.emailjs && typeof window.emailjs.send === 'function') {
+                const response = await window.emailjs.send('service_gl6mmph', 'template_xtplaoo', formData);
+                console.log('EmailJS Success:', response);
+                showMessage('¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.', 'success');
+                contactForm.reset();
+            } else {
+                // Fallback: Mailto
+                console.log('EmailJS not available, using mailto fallback');
+                const subject = `Contacto desde SESO SA - ${formData.empresa}`;
+                const body = `
 Nombre: ${formData.nombre}
 Email: ${formData.email}
-Empresa: ${formData.empresa || 'No especificada'}
+Empresa: ${formData.empresa}
 
 Mensaje:
 ${formData.mensaje}
-            `.trim();
+                `.trim();
 
-            const mailtoLink = `mailto:consultor.ejecutivo@sesosa.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-
-            // Show success message
-            setTimeout(() => {
-                showMessage('Se ha abierto tu cliente de correo. Por favor, envía el mensaje desde allí.', 'success');
-                contactForm.reset();
-            }, 500);
-
+                const mailtoLink = `mailto:consultor.ejecutivo@sesosa.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.location.href = mailtoLink;
+                
+                setTimeout(() => {
+                    showMessage('Se ha abierto tu cliente de correo. Por favor, envía el mensaje desde allí.', 'success');
+                    contactForm.reset();
+                }, 500);
+            }
         } catch (error) {
             console.error('Error:', error);
-            showMessage('Hubo un error al procesar tu mensaje. Por favor, intenta de nuevo o contáctanos directamente a consultor.ejecutivo@sesosa.net', 'error');
+            showMessage('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo o contáctanos directamente a consultor.ejecutivo@sesosa.net', 'error');
         } finally {
             // Re-enable submit button
             submitBtn.textContent = originalText;

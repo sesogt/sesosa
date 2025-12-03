@@ -508,15 +508,18 @@ section {
 .clients-track {
     display: flex;
     width: max-content;
-    animation: marquee 20s linear infinite;
+    animation: marquee 25s linear infinite;
     will-change: transform;
     /* GPU acceleration */
+    -webkit-transform: translateZ(0);
     transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
 /* Pausar al hover para ver mejor */
 .clients-carousel:hover .clients-track {
+    -webkit-animation-play-state: paused;
     animation-play-state: paused;
 }
 
@@ -564,12 +567,25 @@ section {
 }
 
 /* Animación de marquee infinito - loop perfecto */
-@keyframes marquee {
+@-webkit-keyframes marquee {
     0% {
-        transform: translateX(0) translateZ(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%) translateZ(0);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes marquee {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
     }
 }
 

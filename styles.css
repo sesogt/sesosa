@@ -3565,3 +3565,641 @@ a.tool-card.tool-link:hover .tool-cta-blue {
         font-size: 3rem;
     }
 }
+
+/* ============================================
+   PAGE SMARTEXPORTER
+   ============================================ */
+
+/* SmartExporter Tool Card en Index */
+.smartexporter-card {
+    border-top: 4px solid #9B7ED9 !important;
+}
+
+.smartexporter-card:hover {
+    border-color: #7C6BB8 !important;
+    box-shadow: 0 20px 40px rgba(155, 126, 217, 0.25) !important;
+}
+
+.tool-cta-purple {
+    background: linear-gradient(135deg, #9B7ED9, #B8A4E8) !important;
+}
+
+a.tool-card.tool-link:hover .tool-cta-purple {
+    box-shadow: 0 5px 20px rgba(155, 126, 217, 0.4) !important;
+}
+
+/* Hero SmartExporter */
+.smartexporter-hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 120px 0 80px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e1a2e 0%, #2d2640 50%, #3d3557 100%);
+}
+
+.smartexporter-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(155, 126, 217, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(124, 107, 184, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 60% 80%, rgba(100, 200, 220, 0.08) 0%, transparent 40%);
+    z-index: 0;
+}
+
+.smartexporter-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.smartexporter-hero .product-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.smartexporter-hero .product-hero-badge {
+    display: inline-block;
+    background: rgba(155, 126, 217, 0.2);
+    color: #B8A4E8;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(155, 126, 217, 0.3);
+}
+
+.smartexporter-hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.gradient-text-purple {
+    background: linear-gradient(135deg, #9B7ED9 0%, #B8A4E8 50%, #64C8DC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.smartexporter-hero .product-hero-subtitle {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.smartexporter-hero .product-hero-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.smartexporter-hero .product-hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Botones Lila SmartExporter */
+.btn-primary-purple {
+    background: linear-gradient(135deg, #9B7ED9 0%, #7C6BB8 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-primary-purple:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(155, 126, 217, 0.4);
+    background: linear-gradient(135deg, #7C6BB8 0%, #6B5AA0 100%);
+}
+
+.btn-secondary-purple {
+    background: transparent;
+    color: #B8A4E8;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    border: 2px solid rgba(155, 126, 217, 0.5);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-secondary-purple:hover {
+    background: rgba(155, 126, 217, 0.1);
+    border-color: #9B7ED9;
+}
+
+.section-badge-purple {
+    display: inline-block;
+    background: rgba(155, 126, 217, 0.1);
+    color: #9B7ED9;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(155, 126, 217, 0.2);
+}
+
+/* Áreas de Aplicación */
+.smartexporter-areas {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #f8f7fc 0%, white 100%);
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.area-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(155, 126, 217, 0.1);
+    transition: all 0.3s ease;
+}
+
+.area-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(155, 126, 217, 0.15);
+    border-color: rgba(155, 126, 217, 0.3);
+}
+
+.area-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(155, 126, 217, 0.1) 0%, rgba(100, 200, 220, 0.12) 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: #9B7ED9;
+}
+
+.area-card h4 {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Características SmartExporter */
+.smartexporter-features {
+    padding: 100px 0;
+    background: white;
+}
+
+.se-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.se-feature-card {
+    background: linear-gradient(145deg, #f8f7fc 0%, white 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(155, 126, 217, 0.1);
+    transition: all 0.3s ease;
+}
+
+.se-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(155, 126, 217, 0.12);
+    border-color: rgba(155, 126, 217, 0.3);
+}
+
+.se-feature-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #9B7ED9 0%, #64C8DC 100%);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.se-feature-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.se-feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Seguridad SmartExporter */
+.smartexporter-security {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #f8f7fc 0%, white 100%);
+}
+
+.security-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+    align-items: start;
+}
+
+.security-card-large {
+    background: linear-gradient(135deg, #1e1a2e 0%, #2d2640 100%);
+    padding: 3rem;
+    border-radius: 24px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.security-icon-large {
+    width: 100px;
+    height: 100px;
+    background: rgba(155, 126, 217, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: #B8A4E8;
+}
+
+.security-card-large h3 {
+    color: white;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.security-card-large p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+}
+
+.security-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.security-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(155, 126, 217, 0.1);
+    transition: all 0.3s ease;
+}
+
+.security-item:hover {
+    border-color: rgba(155, 126, 217, 0.3);
+    box-shadow: 0 10px 30px rgba(155, 126, 217, 0.1);
+}
+
+.security-item-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    background: linear-gradient(135deg, rgba(155, 126, 217, 0.1) 0%, rgba(100, 200, 220, 0.12) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9B7ED9;
+}
+
+.security-item h4 {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.security-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Ediciones SmartExporter */
+.smartexporter-editions {
+    padding: 100px 0;
+    background: white;
+}
+
+.editions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.edition-card {
+    background: linear-gradient(145deg, #f8f7fc 0%, white 100%);
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 2px solid rgba(155, 126, 217, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.edition-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(155, 126, 217, 0.15);
+    border-color: rgba(155, 126, 217, 0.3);
+}
+
+.edition-card.featured-edition {
+    border-color: #9B7ED9;
+    background: linear-gradient(145deg, rgba(155, 126, 217, 0.05) 0%, white 100%);
+}
+
+.edition-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.edition-header h3 {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    font-weight: 700;
+    margin: 0;
+}
+
+.edition-badge {
+    background: linear-gradient(135deg, #9B7ED9 0%, #7C6BB8 100%);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.edition-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.edition-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.edition-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.edition-features li:last-child {
+    border-bottom: none;
+}
+
+.edition-features li svg {
+    color: #9B7ED9;
+    min-width: 16px;
+}
+
+/* Especificaciones Técnicas */
+.smartexporter-specs {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #f8faf9 0%, white 100%);
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.spec-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(155, 126, 217, 0.1);
+}
+
+.spec-card h4 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #9B7ED9;
+    font-weight: 700;
+}
+
+.spec-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.spec-card ul li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    padding-left: 1rem;
+}
+
+.spec-card ul li:last-child {
+    border-bottom: none;
+}
+
+.spec-card ul li::before {
+    content: "•";
+    color: #9B7ED9;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* CTA SmartExporter */
+.smartexporter-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #1e1a2e 0%, #2d2640 50%, #3d3557 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.smartexporter-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 50%, rgba(155, 126, 217, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(100, 200, 220, 0.1) 0%, transparent 40%);
+    z-index: 0;
+}
+
+.smartexporter-cta .container {
+    position: relative;
+    z-index: 1;
+}
+
+.smartexporter-cta .cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.smartexporter-cta .cta-content h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.smartexporter-cta .cta-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.smartexporter-cta .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-secondary-light {
+    background: transparent;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-secondary-light:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+/* ============================================
+   PAGE SMARTEXPORTER - RESPONSIVE
+   ============================================ */
+@media (max-width: 1200px) {
+    .areas-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .specs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .smartexporter-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .se-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .security-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .editions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .smartexporter-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .smartexporter-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .smartexporter-hero .product-hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .se-features-grid,
+    .editions-grid,
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .smartexporter-cta .cta-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .smartexporter-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .smartexporter-hero .product-hero-buttons {
+        flex-direction: column;
+    }
+}

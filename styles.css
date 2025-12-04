@@ -4203,3 +4203,1021 @@ a.tool-card.tool-link:hover .tool-cta-purple {
         flex-direction: column;
     }
 }
+
+/* ===========================================================================
+   AUDISIS FAMILY STYLES - Beige/Brown Theme (Audirisk, Audit IP, Controlrisk)
+   =========================================================================== */
+
+/* Audisis Color Variables */
+:root {
+    --audisis-primary: #8B7355;
+    --audisis-secondary: #D4C4A8;
+    --audisis-accent: #C9A961;
+    --audisis-dark: #5C4A36;
+    --audisis-light: #F5F0E8;
+    --audisis-cream: #FDF8F0;
+    --audisis-brown: #6B5344;
+    --audisis-gold: #B8963E;
+}
+
+/* Audisis Card in Tools Grid */
+.audisis-card {
+    background: linear-gradient(135deg, var(--audisis-light) 0%, var(--audisis-cream) 100%);
+    border: 1px solid var(--audisis-secondary);
+}
+
+.audisis-card:hover {
+    border-color: var(--audisis-primary);
+    box-shadow: 0 15px 40px rgba(139, 115, 85, 0.2);
+}
+
+.audisis-card .tool-cta-beige {
+    background: linear-gradient(135deg, var(--audisis-primary) 0%, var(--audisis-brown) 100%);
+    color: white;
+}
+
+.audisis-card:hover .tool-cta-beige {
+    background: linear-gradient(135deg, var(--audisis-brown) 0%, var(--audisis-dark) 100%);
+}
+
+.tool-cta-beige {
+    background: linear-gradient(135deg, var(--audisis-primary) 0%, var(--audisis-brown) 100%);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.tool-cta-beige:hover {
+    background: linear-gradient(135deg, var(--audisis-brown) 0%, var(--audisis-dark) 100%);
+    transform: translateX(5px);
+}
+
+/* Audisis Hero Section */
+.audisis-hero {
+    position: relative;
+    padding: 140px 0 100px;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--audisis-cream) 0%, var(--audisis-light) 100%);
+}
+
+.audisis-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(139, 115, 85, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(201, 169, 97, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(212, 196, 168, 0.2) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.audisis-hero .product-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.audisis-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--audisis-dark);
+    margin-bottom: 1rem;
+}
+
+.gradient-text-beige {
+    background: linear-gradient(135deg, var(--audisis-primary) 0%, var(--audisis-gold) 50%, var(--audisis-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.product-hero-badge-beige {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--audisis-primary) 0%, var(--audisis-brown) 100%);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.audisis-hero .product-hero-subtitle {
+    font-size: 1.4rem;
+    color: var(--audisis-brown);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.audisis-hero .product-hero-description {
+    font-size: 1.1rem;
+    color: var(--audisis-dark);
+    max-width: 700px;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Audisis Buttons */
+.btn-primary-beige {
+    background: linear-gradient(135deg, var(--audisis-primary) 0%, var(--audisis-brown) 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(139, 115, 85, 0.3);
+}
+
+.btn-primary-beige:hover {
+    background: linear-gradient(135deg, var(--audisis-brown) 0%, var(--audisis-dark) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 115, 85, 0.4);
+}
+
+.btn-secondary-beige {
+    background: transparent;
+    color: var(--audisis-dark);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--audisis-primary);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-secondary-beige:hover {
+    background: var(--audisis-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Section Badge Beige */
+.section-badge-beige {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--audisis-light) 0%, var(--audisis-secondary) 100%);
+    color: var(--audisis-dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid var(--audisis-primary);
+}
+
+/* Audisis General Sections */
+.audisis-about,
+.audisis-features,
+.audisis-users,
+.audisis-video,
+.audisis-licensing,
+.audisis-cta {
+    padding: 80px 0;
+}
+
+.audisis-about {
+    background: white;
+}
+
+.audisis-features {
+    background: var(--audisis-cream);
+}
+
+/* Audisis Features Grid */
+.audisis-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.audisis-feature-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--audisis-secondary);
+    transition: all 0.3s ease;
+}
+
+.audisis-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(139, 115, 85, 0.15);
+    border-color: var(--audisis-primary);
+}
+
+.audisis-feature-card .feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--audisis-light) 0%, var(--audisis-secondary) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--audisis-dark);
+}
+
+.audisis-feature-card h4 {
+    font-size: 1.2rem;
+    color: var(--audisis-dark);
+    margin-bottom: 0.75rem;
+}
+
+.audisis-feature-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* IIA Definition Section (Audirisk) */
+.iia-definition {
+    background: linear-gradient(135deg, var(--audisis-dark) 0%, var(--audisis-brown) 100%);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.iia-quote {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.iia-quote blockquote {
+    font-size: 1.3rem;
+    color: white;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+.iia-quote cite {
+    color: var(--audisis-accent);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Audirisk Timeline / Phases */
+.audirisk-phases {
+    background: white;
+    padding: 80px 0;
+}
+
+.phases-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.phases-container::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--audisis-secondary) 0%, var(--audisis-primary) 50%, var(--audisis-secondary) 100%);
+}
+
+.phase-item {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.phase-number {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--audisis-primary) 0%, var(--audisis-brown) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(139, 115, 85, 0.3);
+}
+
+.phase-item h4 {
+    font-size: 1.1rem;
+    color: var(--audisis-dark);
+    margin-bottom: 0.5rem;
+}
+
+.phase-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Audit IP Sources */
+.auditip-sources {
+    background: var(--audisis-cream);
+    padding: 80px 0;
+}
+
+.sources-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.source-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--audisis-secondary);
+    transition: all 0.3s ease;
+}
+
+.source-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(139, 115, 85, 0.15);
+    border-color: var(--audisis-primary);
+}
+
+.source-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--audisis-light) 0%, var(--audisis-secondary) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: var(--audisis-dark);
+}
+
+.source-card h4 {
+    font-size: 0.95rem;
+    color: var(--audisis-dark);
+    line-height: 1.4;
+}
+
+/* Audit IP Workflow */
+.auditip-workflow {
+    background: white;
+    padding: 80px 0;
+}
+
+.workflow-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.workflow-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.workflow-step::after {
+    content: '→';
+    position: absolute;
+    right: -10px;
+    top: 35px;
+    font-size: 2rem;
+    color: var(--audisis-primary);
+    font-weight: bold;
+}
+
+.workflow-step:last-child::after {
+    display: none;
+}
+
+.step-circle {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--audisis-primary) 0%, var(--audisis-brown) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+}
+
+.workflow-step h4 {
+    font-size: 1rem;
+    color: var(--audisis-dark);
+    margin-bottom: 0.5rem;
+}
+
+.workflow-step p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Users Grid (3 columns) */
+.audisis-users {
+    background: var(--audisis-cream);
+}
+
+.users-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.users-grid-3 .user-card,
+.audisis-users .user-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--audisis-secondary);
+    transition: all 0.3s ease;
+}
+
+.users-grid-3 .user-card:hover,
+.audisis-users .user-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(139, 115, 85, 0.15);
+    border-color: var(--audisis-primary);
+}
+
+.audisis-users .user-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--audisis-light) 0%, var(--audisis-secondary) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--audisis-dark);
+}
+
+.audisis-users .user-card h3 {
+    font-size: 1.3rem;
+    color: var(--audisis-dark);
+    margin-bottom: 0.5rem;
+}
+
+.user-access {
+    color: var(--audisis-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.user-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.user-features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #555;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--audisis-light);
+}
+
+.user-features li:last-child {
+    border-bottom: none;
+}
+
+.user-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--audisis-primary);
+    font-weight: bold;
+}
+
+/* Audisis Video Section */
+.audisis-video {
+    background: white;
+}
+
+.audisis-video .video-container {
+    max-width: 900px;
+    margin: 3rem auto 0;
+}
+
+.audisis-video .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(139, 115, 85, 0.2);
+}
+
+.audisis-video .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Audisis Licensing */
+.audisis-licensing {
+    background: var(--audisis-cream);
+}
+
+.audisis-licensing .licensing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.audisis-licensing .license-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--audisis-secondary);
+    transition: all 0.3s ease;
+}
+
+.audisis-licensing .license-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(139, 115, 85, 0.15);
+    border-color: var(--audisis-primary);
+}
+
+.audisis-licensing .license-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--audisis-light) 0%, var(--audisis-secondary) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--audisis-dark);
+}
+
+.audisis-licensing .license-card h4 {
+    font-size: 1.1rem;
+    color: var(--audisis-dark);
+    margin-bottom: 0.5rem;
+}
+
+.audisis-licensing .license-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Audisis CTA Section */
+.audisis-cta {
+    background: linear-gradient(135deg, var(--audisis-dark) 0%, var(--audisis-brown) 100%);
+    text-align: center;
+}
+
+.audisis-cta .cta-content h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.audisis-cta .cta-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.audisis-cta .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-secondary-light {
+    background: transparent;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-secondary-light:hover {
+    background: white;
+    color: var(--audisis-dark);
+    border-color: white;
+    transform: translateY(-2px);
+}
+
+/* Controlrisk Specific Styles */
+.controlrisk-standards {
+    background: white;
+    padding: 80px 0;
+}
+
+.standards-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.standard-item {
+    background: var(--audisis-cream);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border: 1px solid var(--audisis-secondary);
+    transition: all 0.3s ease;
+}
+
+.standard-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(139, 115, 85, 0.15);
+    border-color: var(--audisis-primary);
+}
+
+.standard-name {
+    display: block;
+    font-weight: 700;
+    color: var(--audisis-dark);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.standard-desc {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Controlrisk Systems */
+.controlrisk-systems {
+    background: var(--audisis-cream);
+    padding: 80px 0;
+}
+
+.systems-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.system-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--audisis-secondary);
+    transition: all 0.3s ease;
+}
+
+.system-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(139, 115, 85, 0.15);
+    border-color: var(--audisis-primary);
+}
+
+.system-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--audisis-primary) 0%, var(--audisis-brown) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.system-card h4 {
+    font-size: 1rem;
+    color: var(--audisis-dark);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.system-card p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Controlrisk SARO Features */
+.controlrisk-saro {
+    background: white;
+    padding: 80px 0;
+}
+
+.saro-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.saro-feature {
+    background: var(--audisis-cream);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid var(--audisis-secondary);
+    transition: all 0.3s ease;
+}
+
+.saro-feature:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(139, 115, 85, 0.1);
+    border-color: var(--audisis-primary);
+}
+
+.saro-feature-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.saro-letter {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--audisis-primary) 0%, var(--audisis-brown) 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.saro-feature h4 {
+    color: var(--audisis-dark);
+    font-size: 1.1rem;
+    flex: 1;
+}
+
+.saro-feature p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Controlrisk Matrices */
+.controlrisk-matrices {
+    background: var(--audisis-cream);
+    padding: 80px 0;
+}
+
+.matrices-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.matrix-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--audisis-secondary);
+}
+
+.matrix-visual {
+    margin-bottom: 2rem;
+}
+
+.matrix-grid-5x5,
+.matrix-grid-4x5 {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, 
+        #2ecc71 0%, #f1c40f 25%, #e67e22 50%, #e74c3c 75%, #8e44ad 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.matrix-card h4 {
+    font-size: 1.2rem;
+    color: var(--audisis-dark);
+    margin-bottom: 0.75rem;
+}
+
+.matrix-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Controlrisk Knowledge Base */
+.controlrisk-knowledge {
+    background: linear-gradient(135deg, var(--audisis-primary) 0%, var(--audisis-brown) 100%);
+    padding: 60px 0;
+}
+
+.knowledge-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.knowledge-icon {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.knowledge-text h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.knowledge-text p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.knowledge-text strong {
+    color: var(--audisis-accent);
+}
+
+/* Audisis Responsive */
+@media (max-width: 1200px) {
+    .standards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .systems-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sources-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .audisis-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .audisis-features-grid,
+    .users-grid-3,
+    .audisis-licensing .licensing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .phases-container {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    .phases-container::before {
+        display: none;
+    }
+    
+    .phase-item {
+        flex: 0 0 calc(50% - 1rem);
+    }
+    
+    .workflow-steps {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    .workflow-step {
+        flex: 0 0 calc(50% - 1rem);
+    }
+    
+    .workflow-step::after {
+        display: none;
+    }
+    
+    .saro-features-grid,
+    .matrices-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .knowledge-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .audisis-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .audisis-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .audisis-hero .product-hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .audisis-features-grid,
+    .users-grid-3,
+    .audisis-licensing .licensing-grid,
+    .systems-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .standards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .phase-item,
+    .workflow-step {
+        flex: 0 0 100%;
+    }
+    
+    .audisis-cta .cta-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .audisis-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .standards-grid,
+    .sources-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .audisis-hero .product-hero-buttons {
+        flex-direction: column;
+    }
+    
+    .audisis-cta .cta-buttons {
+        flex-direction: column;
+    }
+}

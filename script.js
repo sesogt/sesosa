@@ -202,7 +202,7 @@ Mensaje:
 ${formData.mensaje}
                 `.trim();
 
-                const mailtoLink = `mailto:consultor.ejecutivo@sesosa.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                const mailtoLink = `mailto:asistente.comercial@sesosa.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 window.location.href = mailtoLink;
                 
                 setTimeout(() => {
@@ -212,7 +212,7 @@ ${formData.mensaje}
             }
         } catch (error) {
             console.error('Error:', error);
-            showMessage('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo o contáctanos directamente a consultor.ejecutivo@sesosa.net', 'error');
+            showMessage('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo o contáctanos directamente a asistente.comercial@sesosa.net', 'error');
         } finally {
             // Re-enable submit button
             submitBtn.textContent = originalText;
@@ -342,4 +342,4 @@ document.querySelectorAll('.form-group input, .form-group textarea').forEach(inp
 
 console.log('🚀 SESO SA Website loaded successfully!');
 console.log('✨ Enhanced with beautiful animations and effects');
-console.log('📧 Contact: consultor.ejecutivo@sesosa.net');
+console.log('📧 Contact: asistente.comercial@sesosa.net');
